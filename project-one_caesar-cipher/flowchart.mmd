@@ -1,0 +1,19 @@
+graph TD
+    A(Loop Program) --> B{Prompt}
+    B -->|Encode| C(Prompt for Message & Rotation)
+    C -->H(Loop Each Character)
+    H -->I(Calc -  Add Index to Rotation mod 26)
+    I  -->N(Add Result to Cipher Variable)
+    N -->P(Output Cipher Text)
+    N -->H
+    P -->A
+    B -->|Decode| D(Prompt for Cipher & Rotation)
+    D -->K(Loop Each Character)
+    L  -->M(Add Result to Message Variable)
+    K -->L(Calc - Subtract Rotation from Index mod 26)
+    M -->O(Output Message)
+    M -->K
+    O -->A
+    B -->|Quit| E(Exit)
+    B -->|Invalid| B
+  
