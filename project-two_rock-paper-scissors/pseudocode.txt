@@ -1,0 +1,49 @@
+running_game = true
+
+while running_game
+    user_choices = []
+    player_choice = ""
+    scorecard =
+        "user": "0",
+        "computer": "0",
+        "tie": 0
+    
+    define generate_computer_choice
+        common_choice = most frequent choice
+
+        if common_choice = rock
+            computer_choice = paper
+        else if common_choice = paper
+            computer_choice = scissors
+        else if common_choice = scissors
+            computer_choice = rock
+        else
+            computer_choice = random
+
+    while player_choice not quit
+        generate_computer_choice
+        if player_choice not equal to rock or paper or scissors
+            player_choice = prompt for input
+        else if player_choice = computer_choice
+            add 1 to tie in scorecard
+        else if player_choice = rock
+            if computer_choice = paper
+                add 1 to computer in scorecard
+            else
+                add 1 to player in scorecard
+        else if player_choice = paper
+            if computer_choice = scissors
+                add 1 to computer in scorecard
+            else
+                add 1 to player in scorecard
+        else if player_choice = scissors
+            if computer_choice = rock
+                add 1 to computer in scorecard
+            else
+                add 1 to player in scorecard
+
+        add player_choice to user_choices
+
+    print scorecard
+    print user_choices
+    running_game = false

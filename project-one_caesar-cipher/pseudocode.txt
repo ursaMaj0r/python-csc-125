@@ -1,0 +1,27 @@
+keep_going = true
+alphabet = abcdefghijklmnopqrstuvwxyz
+
+while keep_going
+    input_choice = prompt for input
+
+    if encode
+        plain_text = prompt for secret text
+        rotation = prompt for rotation
+        secret_text = null
+        for each character in plain_text
+            secret_text += index of character in alphabet + rotation mod 26
+        print cipher text
+
+    if decode
+        secret_text = prompt for secret text
+        rotation = prompt for rotation
+        plain_text = null
+        for each character in secret_text
+            plain_text += index of character in alphabet - rotation mod 26
+        print decrypted message
+
+    if quit
+        keep_going = false
+
+    else
+        print error message
